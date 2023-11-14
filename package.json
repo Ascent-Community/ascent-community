@@ -1,0 +1,50 @@
+{
+  "name": "ultimate-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rimraf node_modules",
+    "prepare": "husky install",
+    "db:push": "prisma db push",
+    "db:pull": "prisma db pull",
+    "db:studio": "prisma studio",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "db:start": "docker compose up -d",
+    "db:stop": "docker compose down"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.6",
+    "inquirer": "8",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@commitlint/cz-commitlint": "^17.4.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "lint-staged": "^15.0.2",
+    "husky": "^8.0.0",
+    "prettier": "latest",
+    "rimraf": "^5.0.5",
+    "turbo": "latest",
+    "typescript": "5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,ts, tsx, jsx}": [
+      "tsc-files --noEmit",
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
