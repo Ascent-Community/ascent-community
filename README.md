@@ -23,7 +23,9 @@ pnpm install
 
 ## Usage
 
-First, create a .env file following the instructions on .env.example
+Follow the instructions in .env.example located at root , frontend and backend folders.
+
+## Starting
 
 Then, start your local database. Make sure you have Docker installed on your computer:
 
@@ -38,7 +40,7 @@ yarn db:start
 pnpm db:start
 ```
 
-After that, deploy all migrations to the database:
+## After that, deploy all migrations to the database:
 
 ```bash
 # With NPM
@@ -64,7 +66,7 @@ yarn db:seed
 pnpm db:seed
 ``` -->
 
-Now just run `dev` script.
+## Now just run `dev` script.
 
 ```bash
 # With NPM
