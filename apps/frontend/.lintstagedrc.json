@@ -1,0 +1,7 @@
+{
+  "*.{js,ts,tsx}": [
+    "tsatsiki --project tsconfig.json",
+    "eslint --max-warnings 0 --fix",
+    "prettier --write"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["./react", "plugin:@next/next/recommended"],
+  "plugins": ["jsx-a11y"],
+  "overrides": [
+    {
+      "files": ["src/app/**/{page,layout,template,loading,error}.tsx"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

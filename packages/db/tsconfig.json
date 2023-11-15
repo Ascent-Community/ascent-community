@@ -1,0 +1,3 @@
+{
+  "extends": "@ascent/tsconfig/base.json"
+}

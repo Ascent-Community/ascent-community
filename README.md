@@ -4,77 +4,53 @@
 
 Ascent purpose is to create a platform for developers who needs to find a job for any reasons (layoffs, extra profit, etc).
 
-## Installation
+![ERD](.github/assets/ERD.svg)
 
-Use a package manager of your choice in order to install all dependencies.
+## Requirements
+
+- Node.js (20.9.0)
+- PNPM (8.10.2)
+- Docker (24.0.7)
+
+## Installation
 
 In the root folder of the project run:
 
 ```bash
-# With NPM
-npm install
-
-# With Yarn
-yarn install
-
-# With PNPM
 pnpm install
 ```
 
 ## Usage
 
-Follow the instructions in .env.example located at root , frontend and backend folders.
+Follow the instructions of all .env.example.
+
+<!-- - /apps/backend -->
+
+- /apps/frontend
+- /packages/db
 
 ## Starting
 
 Then, start your local database. Make sure you have Docker installed on your computer:
 
 ```bash
-# With NPM
-npm run db:start
-
-# With Yarn
-yarn db:start
-
-# With PNPM
 pnpm db:start
 ```
 
 ## After that, deploy all migrations to the database:
 
 ```bash
-# With NPM
-npm run db:deploy
-
-# With Yarn
-yarn db:deploy
-
-# With PNPM
-pnpm db:deploy
+pnpm db migrate:deploy
 ```
 
-<!-- You can also populate the db using seed command:
+You can also populate the db using seed command:
 
 ```bash
-# With NPM
-npm run db:seed
+pnpm db seed
+```
 
-# With Yarn
-yarn db:seed
-
-# With PNPM
-pnpm db:seed
-``` -->
-
-## Now just run `dev` script.
+## Now just run `dev` script to start all applications on development mode.
 
 ```bash
-# With NPM
-npm run dev
-
-# With Yarn
-yarn dev
-
-# With PNPM
 pnpm dev
 ```

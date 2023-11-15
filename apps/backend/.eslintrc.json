@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["@ascent/eslint-config/node"],
+  "ignorePatterns": ["node_modules/*", "dist/*"]
+}

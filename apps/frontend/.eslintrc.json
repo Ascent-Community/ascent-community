@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["@ascent/eslint-config/next"],
+  "ignorePatterns": ["node_modules/*", ".next/*"]
+}

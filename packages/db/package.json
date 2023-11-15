@@ -1,0 +1,40 @@
+{
+  "name": "@ascent/db",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "prisma": {
+    "seed": "tsx src/seed.ts"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf .turbo node_modules dist",
+    "push": "prisma db push",
+    "pull": "prisma db pull",
+    "studio": "prisma studio",
+    "generate": "prisma generate",
+    "migrate:deploy": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev",
+    "seed": "prisma db seed",
+    "format": "prisma format",
+    "lint": "eslint src --fix",
+    "prebuild": "pnpm generate",
+    "predev": "pnpm generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.6.0"
+  },
+  "devDependencies": {
+    "@ascent/tsconfig": "workspace:*",
+    "@types/node": "^20.9.0",
+    "prisma": "^5.6.0",
+    "prisma-erd-generator": "^1.11.1",
+    "tsup": "^7.2.0",
+    "tsx": "^4.1.2"
+  }
+}

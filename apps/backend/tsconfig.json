@@ -1,0 +1,11 @@
+{
+  "extends": "@ascent/tsconfig/nest.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "~tests/*": ["./tests/*"]
+    },
+    "types": ["vitest/globals"]
+  }
+}

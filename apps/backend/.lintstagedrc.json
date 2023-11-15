@@ -1,0 +1,8 @@
+{
+  "*.{js,ts,tsx}": [
+    "bash -c 'pnpm typecheck'",
+    "vitest related --run --bail",
+    "eslint --max-warnings 0 --fix",
+    "prettier --write"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@ascent/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier -w src/**/*.{css,ts,tsx,json,md}",
+    "format:check": "prettier src/**/*.{css,ts,tsx,json,md} --check",
+    "types:check": "tsc --noEmit --incremental false",
+    "lint:pr": "pnpm types:check && pnpm lint && pnpm format:check",
+    "clean": "rimraf .turbo node_modules .next"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.7.1",
+    "next": "14.0.2",
+    "next-auth": "5.0.0-beta.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@ascent/eslint-config": "workspace:*",
+    "@ascent/tsconfig": "workspace:*",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "vitest": "^0.34.6"
+  }
+}
